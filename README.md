@@ -28,14 +28,14 @@ The dataset includes LiDAR, 4D Radar, GNSS, RGB camera and IMU.
 
 ### Hidden Testing Part
 
-* **grass_track** (3813s)
+* **grass_track_test** (3813s)
  The complete area, including the southern part.  
 ---
 
 ## Data Structure and File Organization
 
 ```
-data/
+grass_track_training/
 ├── calibration
 │   ├── extrinsics
 │   │   ├── extrinsics.txt
@@ -43,23 +43,23 @@ data/
 │   └── intrinsics
 │       ├── camera_calibration.txt
 │       └── hugin_radar_startup_params.txt
-├── test
-│   └── grass_track
-│       └── < FILES NOT PROVIDED>               
-└── train
-    └── grass_track_training
-        ├── bag_files
-        │   ├── grass_track_training__2025-06-12-22-12-48_0.bag
-        │   ├── ...
-        │   └── grass_track_training__2025-06-12-23-38-13_31.bag
-        └── reference
-            ├── reference_train_bagfile.bag
-            ├── reference_train_gps_in_utm_format.csv
-            ├── reference_train_gps_rtk_in_robot_time.csv
-            └── source_rtk_solution_from_Emlid_RTKLIB
-                ├── gps_filtered_high_accuracy.pos
-                ├── gsp_original_post_fix_including_bad_sections.pos
-                └── train_robot_time_to_gps_time.csv
+├── LICENSE.txt
+├── readme.txt
+├── reference
+│   ├── reference.txt
+│   └── supplementary
+│       ├── reference_train_bagfile.bag
+│       ├── reference_train_gps_rtk_in_robot_time.csv
+│       └── source_rtk_solution_from_Emlid_RTKLIB
+│           ├── gps_filtered_high_accuracy.pos
+│           ├── gsp_original_post_fix_including_bad_sections.pos
+│           └── train_robot_time_to_gps_time.csv
+├── sensors
+│   ├── grass_track_training__2025-06-12-22-12-48_0.bag
+│   ├── ...
+│   └── grass_track_training__2025-06-12-23-38-13_31.bag
+└── tracks
+    └── default.txt
 ```
 
 * `grass_track_training__<sequence time and number>.bag` → Raw sensory data and static transforms.
@@ -71,8 +71,9 @@ data/
 The dataset provides sensor measurements from these sensors:
 
 * Sensrad Hugin A3-Sample (solid-state 4D radar)
-* Ouster OS0-32 (3D lidar)
   * Please note that the Hugin A3-Sample radar used in our dataset is an early demo model not with the same performance as the forthcoming production-ready model.
+* Ouster OS0-32 (3D lidar)
+  * This sensor is available for tuning and verification of your SLAM solution, but not available in the competition runs (i.e., the topic with point clouds will not be published in the Docker environment).  
 * IDS Imaging uEye camera (2056x1542px)
 * Xsens MTi-30 (IMU)
 * Emlid Reach RS2+ (RTK-GNSS receiver pair)
@@ -82,8 +83,8 @@ The dataset provides sensor measurements from these sensors:
 The dataset contains a `reference/` subdirectory with:
 
 * `reference_train_bagfile.bag`: Reference GNSS RTK localization synchrized with the robot time, saved as a bag file.
-* `reference_train_gps_in_utm_format.csv`: The GNSS RTK expressed in the UTM coordinates, with time stamps from the robot. Format: **secs, nsecs, northing[m], easting[m], elevation, qx, qy, qz, qw**. Note that the quarternion is always identity.
-* `reference_train_gps_rtk_in_robot_time.csv`: Contains the same information as `reference_train_gps_in_utm_format.csv`, but expressed in latitude and longitude. Format: **secs, nsecs, latitude, longitude, elevation**
+* `reference.txt`: The GNSS RTK expressed in the UTM coordinates, with time stamps from the robot. Format: **timestamp[s], northing[m], easting[m], elevation, qx, qy, qz, qw**. Note that the quarternion is always identity.
+* `reference_train_gps_rtk_in_robot_time.csv`: Contains the same information as `reference.txt`, but expressed in latitude and longitude. Format: **secs, nsecs, latitude, longitude, elevation**.
 * `gps_filtered_high_accuracy.pos`: RTK solution used to generate the reference samples for the files above. It does not contain sections with too few sattelites. Note that the displayed time is the GPS time (no time zone, no step seconds).
 * `gsp_original_post_fix_including_bad_sections.pos`: Complete RTK solution, wih all samples including the noisy ones.
 * `train_robot_time_to_gps_time.csv`: Conversion from the robot time to the time indicated by the GNSS. The robot was no exactly synchronized with the GNSS, there is approx. 0.6s offset. This file can be used to match those times. Format: **robot secs, robot nsecs, gnss secs, gnss nsecs** 
@@ -92,7 +93,7 @@ The dataset contains a `reference/` subdirectory with:
 
 ## Downloads
 
-* [All training data](https://cloud.oru.se/s/dDMaJ3KLm5N3PDt) (32 GB in total)
+* [All training data](https://cloud.oru.se/s/6jFmgbrsq7Amrde) (32 GB in total)
 
 ---
 
