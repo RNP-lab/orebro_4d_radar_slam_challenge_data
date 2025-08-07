@@ -114,6 +114,9 @@ The dataset contains a `reference/` subdirectory with:
 
 ## Acknowledgement
 
+The camera stream in this dataset was anonymized using [EgoBlur](https://github.com/facebookresearch/EgoBlur) 
+* Raina, N., Somasundaram, G., Zheng, K., Miglani, S., Saarinen, S., Meissner, J., Schwesinger, M., Pesqueira, L., Prasad, I., Miller, E., Gupta, P., Yan, M., Newcombe, R., Ren, C., & Parkhi, O. M. (2023). EgoBlur: Responsible Innovation in Aria. arXiv preprint [arXiv:2308.13093](https://arxiv.org/abs/2308.13093).
+
 The work on this dataset was supported by the European Union's Horizon Europe Framework Programme under the RaCOON project (ID: 101106906).
 
 ![Funded by EU](media/EN_FundedbytheEU_RGB_POS.png)
