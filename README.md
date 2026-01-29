@@ -7,7 +7,9 @@
 * [Examples and Teasers](#examples-and-teasers)
 * [Acknowledgement](#acknowledgement)
 
-# The Viking Hill Dataset and Technical Details
+# Örebro 4D-radar SLAM Challenge Data [UNDER CONSTRUCTION]
+
+
 
 ## Dataset description
 ![Viking hill in Orebro](media/viking_hill_sm.jpg)
