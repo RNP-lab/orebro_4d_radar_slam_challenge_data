@@ -12,26 +12,31 @@
 
 
 ## Dataset description
-![Viking hill in Orebro](media/viking_hill_sm.jpg)
-*The recorded track captures the [Enbuskabacken](https://www.lansstyrelsen.se/orebro/besoksmal/kulturmiljoer/enbuskabacken.html) area in Örebro.*
+![Viking hill in Orebro](media/husky_in_snow.jpg)
+*The recorded track captures the [Enbuskabacken](https://www.lansstyrelsen.se/orebro/besoksmal/kulturmiljoer/enbuskabacken.html) and the neighboring university campus in Örebro.*
 
-This dataset is one of the competition tracks in the SLAM challenge organized by the [Resilient SLAM in Challenging Settings](https://comrob.github.io/ecmr25slam/#about) workshop at the [ECMR 2025](https://ecmr2025.dei.unipd.it/).
-The dataset consists of a single long trajectory through a forested area (approx. 200x200m) at the Örebro university campus.
-It was recorded in summer 2024, during the vegetation peak. The terrain is uneven because the area used to serve as a burial ground during the Viking Age (550-1050 AD).
-The dataset includes LiDAR, 4D Radar, GNSS, RGB camera and IMU.
+This dataset serves as the training and competition track in the 4D-radar SLAM challenge organized by the [Radar in Robotics: New Frontiers](https://sites.google.com/view/radar-robotics/home) workshop at the [ICRA 2026](https://2026.ieee-icra.org/workshops-and-tutorials/) conference.
+The dataset consists of two trajectories driven with a Husky robot through a forested area (approx. 200x200m) and the neighbouring Örebro university campus.
+It was recorded in January 2026. The terrain in the forrested area is uneven because it used to serve as a burial ground during the Viking Age (550-1050 AD). Even the campus portion of the trajectory involves climbing up some inclined paths and sloped terrain.
+The dataset includes a liDAR, three 4D radar sensors, a GNSS reference, an RGB camera and an IMU.
+In the training run, all data are provided. In the competition run, only the radars and IMU are available.
+
+![Training run reference lidar map](media/map_training.jpg)
+*The reference lidar map for the training run, created using the GLIM SLAM package.*
 
 ---
 
 ## Dataset Parts
 ### Public Training Part
 
-* **grass_track_training** (1566s)
- Initial portion of the area (the northern part)
+* **01_campus_training_localized** (2257s)
+ A 1.8km-long trajectory that covers both the natural and urban environment at the campus. Its shape was chosen as to offer several opportunities for loop closure.
 
 ### Hidden Testing Part
 
-* **grass_track_test** (3813s)
- The complete area, including the southern part.  
+* **02_campus_eval_filtered** (3813s)
+ A 2.6km-long track that covers the same environment. It also allows several loop closures. From this run, we provide only the radar and IMU data. The competition SLAM systems must be able to localize and map with these modalities.
+ 
 ---
 
 ## Data Structure and File Organization
@@ -40,10 +45,8 @@ The dataset includes LiDAR, 4D Radar, GNSS, RGB camera and IMU.
 grass_track_training/
 ├── calibration
 │   ├── extrinsics
-│   │   ├── extrinsics.txt
 │   │   └── frames.pdf
 │   └── intrinsics
-│       ├── camera_calibration.txt
 │       └── hugin_radar_startup_params.txt
 ├── LICENSE.txt
 ├── readme.txt
