@@ -42,29 +42,43 @@ In the training run, all data are provided. In the competition run, only the rad
 ## Data Structure and File Organization
 
 ```
-grass_track_training/
 ├── calibration
-│   ├── extrinsics
-│   │   └── frames.pdf
-│   └── intrinsics
-│       └── hugin_radar_startup_params.txt
-├── LICENSE.txt
-├── readme.txt
-├── reference
-│   ├── reference.txt
-│   └── supplementary
-│       ├── reference_train_bagfile.bag
-│       ├── reference_train_gps_rtk_in_robot_time.csv
-│       └── source_rtk_solution_from_Emlid_RTKLIB
-│           ├── gps_filtered_high_accuracy.pos
-│           ├── gsp_original_post_fix_including_bad_sections.pos
-│           └── train_robot_time_to_gps_time.csv
-├── sensors
-│   ├── grass_track_training__2025-06-12-22-12-48_0.bag
-│   ├── ...
-│   └── grass_track_training__2025-06-12-23-38-13_31.bag
-└── tracks
-    └── default.txt
+│   ├── frames_overview.pdf
+│   ├── hugin_a4_radar_startup_params.txt
+│   └── static_tfs.launch.xml
+└── data
+    ├── 01_campus_training_localized
+    │   ├── gps
+    │   │   └── ReachRoverO_solution_20260120122238.LLH
+    │   ├── reference_map
+    │   │   └── 01_map.ply
+    │   └── rosbag
+    │       └── 01_campus_training_localized
+    │           ├── metadata.yaml
+    │           ├── racoon_2026_01_28_17h_34m_30s_0.mcap
+    │           ├── racoon_2026_01_28_17h_34m_30s_10.mcap
+    │           ├── racoon_2026_01_28_17h_34m_30s_11.mcap
+    │           ├── racoon_2026_01_28_17h_34m_30s_1.mcap
+    │           ├── racoon_2026_01_28_17h_34m_30s_2.mcap
+    │           ├── racoon_2026_01_28_17h_34m_30s_3.mcap
+    │           ├── racoon_2026_01_28_17h_34m_30s_4.mcap
+    │           ├── racoon_2026_01_28_17h_34m_30s_5.mcap
+    │           ├── racoon_2026_01_28_17h_34m_30s_6.mcap
+    │           ├── racoon_2026_01_28_17h_34m_30s_7.mcap
+    │           ├── racoon_2026_01_28_17h_34m_30s_8.mcap
+    │           └── racoon_2026_01_28_17h_34m_30s_9.mcap
+    └── 02_campus_eval_filtered
+        └── rosbag
+            └── 02_campus_eval_filtered
+                ├── 02_campus_eval_filtered_0.mcap
+                ├── 02_campus_eval_filtered_1.mcap
+                ├── 02_campus_eval_filtered_2.mcap
+                ├── 02_campus_eval_filtered_3.mcap
+                ├── 02_campus_eval_filtered_4.mcap
+                ├── 02_campus_eval_filtered_5.mcap
+                ├── 02_campus_eval_filtered_6.mcap
+                ├── 02_campus_eval_filtered_7.mcap
+                └── metadata.yaml
 ```
 
 * `grass_track_training__<sequence time and number>.bag` → Raw sensory data and static transforms.
