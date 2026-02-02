@@ -30,12 +30,14 @@ In the training run, all data are provided. In the competition run, only the rad
 ### Public Training Part
 
 * **01_campus_training_localized** (2257s)
- A 1.8km-long trajectory that covers both the natural and urban environment at the campus. Its shape was chosen as to offer several opportunities for loop closure.
+1.8km-long trajectory that covers both the natural and urban environment at the campus. Its shape was chosen as to offer several opportunities for loop closure.
+
+  
 
 ### Hidden Testing Part
 
 * **02_campus_eval_filtered** (3813s)
- A 2.6km-long track that covers the same environment. It also allows several loop closures. From this run, we provide only the radar and IMU data. The competition SLAM systems must be able to localize and map with these modalities.
+2.6km-long track that covers the same environment. It also allows several loop closures. From this run, we provide only the radar and IMU data. The competition SLAM systems must be able to localize and map with these modalities.
  
 ---
 
