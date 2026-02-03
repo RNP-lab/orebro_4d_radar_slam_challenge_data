@@ -139,10 +139,6 @@ To download the archive and decompress it you need 57GB+65GB of free HDD space.
 
 ## Acknowledgement
 
-The dataset was labelled using the online tools from [Segments.ai](https://segments.ai) who generously provided us a free academic license.
-
-* Segments.ai (2023). Segments.ai data labeling platform, [https://segments.ai](https://segments.ai).
-
 The reference map was constructed using the [GLIM](https://github.com/koide3/glim) and localization was obtained by using Norlab's [ICP Mapper](https://github.com/norlab-ulaval/norlab_icp_mapper_ros)
 
 * Koide et al., "GLIM: 3D Range-Inertial Localization and Mapping with GPU-Accelerated Scan Matching Factors", Robotics and Autonomous Systems, 2024, [[DOI]](https://doi.org/10.1016/j.robot.2024.104750) [[Arxiv]](https://arxiv.org/abs/2407.10344)
