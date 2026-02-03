@@ -7,9 +7,7 @@
 * [Examples and Teasers](#examples-and-teasers)
 * [Acknowledgement](#acknowledgement)
 
-# Örebro 4D-radar SLAM Challenge Data [UNDER CONSTRUCTION]
-
-
+# Örebro 4D-radar SLAM Challenge Data
 
 ## Dataset description
 ![Viking hill in Orebro](media/husky_in_snow.jpg)
