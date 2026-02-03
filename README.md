@@ -79,7 +79,7 @@ In the training run, all data are provided. In the competition run, only the rad
                 └── metadata.yaml
 ```
 
-* `rosbag` → ROS2 Jazzy bagfile version, using mcap as the storage format.
+* `rosbag/` → ROS2 Jazzy bagfile version, using mcap as the storage format.
 * `gps/` → Reference RTK trajectory, as obtained from the Emlid Reach RS2+ receiver.
 * `reference_map/` → Reference lidar map exported from the GLIM SLAM package. This map was used together with the Norlab ICP Mapper to populate the `map` → `odom` transform in the training run.
 * `calibration/` → Transformations between sensor frames and the Hugin radar settings. TFs provided as a ROS2 launch file for convenience.
