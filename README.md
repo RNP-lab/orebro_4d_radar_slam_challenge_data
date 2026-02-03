@@ -1,13 +1,13 @@
+# Örebro 4D-radar SLAM Challenge Data
+
 ### 📚 Table of Contents
 
 * [Dataset Description](#dataset-description)
 * [Dataset Parts](#dataset-parts)
 * [Data Structure and File Organization](#data-structure-and-file-organization)
 * [Downloads](#downloads)
-* [Examples and Teasers](#examples-and-teasers)
+* [Examples and Teasers](#video-teaser)
 * [Acknowledgement](#acknowledgement)
-
-# Örebro 4D-radar SLAM Challenge Data
 
 ## Dataset description
 ![Viking hill in Orebro](media/husky_in_snow.jpg)
