@@ -124,7 +124,7 @@ The dataset contains reference localization for the training run:
 
 The dataset can be accessed file-by-file at this [repository](https://cloud.oru.se/s/y8fLYsxfFRSoH4z)
 
-As there are many files, many of them large, therefore we also provide a compressed version. 
+As there are many files, many of them large, we also provide a compressed version. 
 The dataset was compressed using the **7z** tool, make sure to have it installed in your system for the decompression. 
 For convenience, consider using the provided bash download script. It downloads and decompresses the archive at the location of running it. 
 To download the archive and decompress it you need 57GB+65GB of free HDD space. 
