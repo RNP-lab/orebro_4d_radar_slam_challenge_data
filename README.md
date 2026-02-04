@@ -85,7 +85,7 @@ In the training run, all data are provided. In the competition run, only the rad
 * `calibration/` → Transformations between sensor frames and the Hugin radar settings. TFs provided as a ROS2 launch file for convenience.
 
 ### Sensors
-The dataset provides sensor measurements from these sensors:
+The dataset provides measurements from these sensors:
 
 * Sensrad Hugin A4-Sample (solid-state 4D radar, three units covering 3x90°)
   * The sensor message is a point cloud which includes the power and doppler values in each point.
