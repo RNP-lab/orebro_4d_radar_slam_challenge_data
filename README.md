@@ -122,14 +122,16 @@ The dataset contains reference localization for the training run:
 
 ## Downloads
 
-The dataset can be accessed file-by-file at this [repository](https://cloud.oru.se/s/y8fLYsxfFRSoH4z)
+The dataset can be accessed file-by-file at this [repository](https://orucloud.oru.se/s/AR8arkjXLH4b4AD)
+The shared folder is accessible with the `racoon2026` password.
 
-As there are many files, many of them large, we also provide a compressed version. 
+As there are many files, many of them large, we also provide a [compressed version](https://orucloud.oru.se/s/aLecRqZzpiMLPLt). The folder can be accessed with the password `racoon2026` as well. 
 The dataset was compressed using the **7z** tool, make sure to have it installed in your system for the decompression. 
-For convenience, consider using the provided bash download script. It downloads and decompresses the archive at the location of running it. 
-To download the archive and decompress it you need 57GB+65GB of free HDD space. 
+The command to extract the files is 
 
-* [Download script](tools/download_and_decompress.bash)
+```
+7z x slam_competition_data.7z.001
+```
 
 ---
 
